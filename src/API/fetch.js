@@ -17,7 +17,7 @@ export async function getAllArtworkGrids() {
 // GET ONE ARTWORK (SQUARES)
 export async function getOneArtworkSquares(id) {
   try {
-    const response = await fetch(`${URL}/artworks/${id}`);
+    const response = await fetch(`${URL}/artworks/squares/${id}`);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }

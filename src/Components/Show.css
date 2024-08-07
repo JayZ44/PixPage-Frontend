@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #4caf50;
+  font-size: 2.5rem;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+}
+
+.info-panel {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-panel h3 {
+  margin: 10px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.SketchPicker {
+  margin: 20px 0;
+}
+
+.delete-button {
+  background-color: #f44336;
+  margin-top: 20px;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(15px, 1fr)
+  ); /* Adjust size as needed */
+  gap: 0px; /* Optional: Add space between grid squares */
+  width: 450px; /* Ensure container uses full width */
+  max-width: 560px; /* Optional: Set a maximum width if needed */
+  height: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-square {
+  width: 100%;
+  height: 100%;
+  /* border: 0.025px solid #ccc; */
+  /* margin: 0.025px; */
+  cursor: pointer;
+  aspect-ratio: 1; /* Ensures squares stay square */
+  transition: background-color 0.2s ease;
+}

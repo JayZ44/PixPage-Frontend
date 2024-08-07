@@ -1,21 +1,28 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(var(--repeat-times), 1fr);
-  width: 100px;
+  width: 400px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  margin: 10px;
+  border: 1px solid black;
 }
 
 .grid-row {
   display: flex;
 }
 
+button {
+  margin: 5px;
+}
 :root {
   --repeat-times: 3; /* Default value for the number of times to repeat */
 }
 
 .grid-square {
-  width: 50px;
-  height: 50px;
-  border: 0.025px solid #ccc;
-  margin: 0.025px;
+  width: 100%;
+  height: 100%;
+  /* border: 0.025px solid #ccc; */
+  /* margin: 0.025px; */
   cursor: pointer;
+  aspect-ratio: 1; /* Ensures squares stay square */
 }

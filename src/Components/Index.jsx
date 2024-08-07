@@ -1,10 +1,14 @@
 import { Link, useNavigate } from "react-router-dom";
 
-import { getAllArtworkGrids } from "../API/fetch";
+import { getAllArtworkGrids, getOneArtworkSquares } from "../API/fetch";
 
 import React, { useState, useEffect } from "react";
 
+import "./Grid.css";
+
 const Index = () => {
+  const [indexSquares, setIndexSquares] = useState([]);
+
   const navigate = useNavigate();
   const [allArtworkGrids, setAllArtworkGrids] = useState(null);
 
@@ -20,7 +24,7 @@ const Index = () => {
 
   return (
     <div>
-      <div>Index</div>
+      <h1>Welcom To PixPage!</h1>
       <button
         onClick={() => {
           navigate("/grid");
@@ -34,6 +38,33 @@ const Index = () => {
             <div>
               {" "}
               This is a artwork! {artwork.title}, {artwork.creator}{" "}
+              <div className="grid-container">
+                {!indexSquares ? (
+                  <div>Loading...</div>
+                ) : (
+                  (console.log(indexSquares),
+                  indexSquares.map((row, rowIndex) => {
+                    console.log(
+                      row.color,
+                      Object.values(row).color,
+                      indexSquares.length
+                    );
+
+                    return (
+                      <div key={rowIndex} className="grid-row">
+                        <div
+                          key={`${Object.values(row).id}`}
+                          className="grid-square"
+                          style={{
+                            backgroundColor: row.color,
+                          }}
+                          onClick={() => handleSquareClick(row.coordinates)}
+                        />
+                      </div>
+                    );
+                  }))
+                )}
+              </div>
             </div>
           </Link>
         ))
