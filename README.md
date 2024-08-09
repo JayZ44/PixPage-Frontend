@@ -1,31 +1,44 @@
-# Basic React Starter
+# PixPage Frontend
 
-You can use this starter to create any ReactJS app you would like.
-Unlike when you use `npm create vite@latest your-app-name -- --template react`,
+##Setup
 
-This repo has removed all of the unwanted starter code that is normally included when using `npm` to create an application.
+- Fork and clone this repo
+- Type "npm install" into the terminal to install dependencies
+- Type "npm run dev" to start up the website and go to the localhost provided in the terminal
 
-## Getting started
+The Frontend is now ready to use!
 
-- `clone` this application
-- change the name of this directory to a name that refers to your current project. Don't just leave it as `react-basic-starter`
-  _Hint:_ In the terminal, type `mv react-basic-starter new-name-of-your-app`
-- `cd` into the app
-- in the terminal run `git remote remove origin` in order to remove any connection to this Github folder.
+## How to use
 
-- run `npm install`
-- to start the project, run `npm run dev`
-- no navigate to `localhost:3000` and you will see the app
-- Now you are ready to code
+- To view an already existing artwork, click one. 
+From there you will be able to delete the artwork (edit does not yet work).
+After clicking delete and navigating back to the home page, you will see that the artwork is no longer there.
+Click the Home button to go back to the home page.
 
-If you would like to connect this afterwards to your personal Github then:
+- To create an artwork, click the "New Artwork" button.
 
-- go to your Github account in the browser
-- create a new repo and give it a name
-- make sure the repo is public and click `Create Repository`
-- copy the instructions under the title `…or push an existing repository from the command line`
-- paste the commands in your terminal
+# DO THIS BEFORE YOU MAKE YOUR ARTWORK!!
 
-You have now connected your project to the repo.
+- Your art cannot exist without a creator!
+- To make a new creator, you must type in a name and bio into the respective fields and click "Submit Creator"
+- Your art cannot exist without a grid to hold it!
+- To make a new grid/Artwork you must give it a title
+- If you submitted a creator the other two fields should already be filled in
+- If you want to make an artwork for an existing creator, you must type their name into the Creator Name field of the Make Creator section.
+- Afterwords you must type their Creator Id into the Creator Id field
+- When all three "Make Artwork" fields are filled in, you can click "Submit Artwork"
 
-**You have the ability to clone this repo over and over to create your own projects. Just remember to change the name of the folder so that you do not have duplicates**
+## You may now start making art!
+
+Use the color wheel to pick any color you wish, and draw on the canvas provided below!
+If you wish to clear the canvas, clikc the "Clear Grid" button.
+If you are done and wish to save your artwork, click the "Save Image" button.
+When you navigate back to the home page you should see your artwork at the bottom of the page.
+
+
+## Backend Link:
+
+https://github.com/JayZ44/PixPage-Backend
+
+
+
